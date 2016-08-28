@@ -2,7 +2,7 @@ package module2.homework.homework2_1;
 
 public class MinMax {
 
-    public static int getMin(int[] array) {
+    public static int min(int[] array) {
         int min = array[0];
         for (int i = 0; i < array.length; i++) {
             if (min > array[i]) {
@@ -12,7 +12,7 @@ public class MinMax {
         return min;
     }
 
-    public static int getMax(int[] array) {
+    public static int max(int[] array) {
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (max < array[i]) {
@@ -22,7 +22,7 @@ public class MinMax {
         return max;
     }
 
-    public static double getMin(double[] array) {
+    public static double min(double[] array) {
         double min = array[0];
         for (int i = 0; i < array.length; i++) {
             if (min < array[i]) {
@@ -31,7 +31,7 @@ public class MinMax {
         }
         return min;
     }
-    public static double getMax(double [] array){
+    public static double max(double [] array){
         double max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (max < array[i]) {
