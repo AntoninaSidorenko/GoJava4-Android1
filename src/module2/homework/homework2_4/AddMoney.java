@@ -9,9 +9,10 @@ public class AddMoney {
         double rest = 0;
 
         for(int i = 0; i < ownerNames.length; i++){
-            if(ownerNames[i] == ownerName){
+            if(ownerName.equals(ownerNames[i])){
                 rest = balances[i] + fund;
-                System.out.println(ownerName);
+                System.out.print(ownerName + " ");
+                break;
             }
 
         }

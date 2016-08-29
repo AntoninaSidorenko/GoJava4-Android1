@@ -12,20 +12,20 @@ public class WithDrawMoney_3 {
         double rest = 0;
 
         for (int i = 0; i < ownerNames.length; i++) {
-            if (ownerName == ownerNames[i]) {
+            if (ownerName.equals(ownerNames[i])) {
                 rest = balances[i] - (withdrawal + (withdrawal * COMMISSION));
-            }
-            if (rest >= 0) {
-                System.out.println("ok");
-                break;
-            } else {
-                System.out.println("No");
+                if (rest >= 0)
+                    System.out.print(ownerName + " " + withdrawal + " ");
 
+            } else if (rest < 0) {
+                System.out.println(ownerName + " NO");
+                return 0;
             }
-
         }
+
         return rest;
     }
+
 }
 
 
