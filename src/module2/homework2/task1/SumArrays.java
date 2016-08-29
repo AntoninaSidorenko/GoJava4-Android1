@@ -1,4 +1,4 @@
-package module2.homework.homework2_1;
+package module2.homework2.task1;
 
 public class SumArrays {
 

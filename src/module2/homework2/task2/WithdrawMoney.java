@@ -1,4 +1,4 @@
-package module2.homework.homework2_2;
+package module2.homework2.task2;
 
 public class WithdrawMoney {
 
