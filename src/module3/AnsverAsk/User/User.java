@@ -1,4 +1,4 @@
-package module3.AnsverAsk;
+package module3.AnsverAsk.User;
 
 public class User {
     private String[] phones;
