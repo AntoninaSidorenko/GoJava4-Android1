@@ -20,7 +20,6 @@ public class WithdrawMoney {
                     break;
                 } else {
                     System.out.println(ownerName + " NO");
-                    break;
                 }
             }
         }
