@@ -1,5 +1,7 @@
 package module3.AnsverAsk.User;
 
+import module3.AnsverAsk.fileSystem.TextFile;
+
 /**
  * Created by Lenovo on 30.08.2016.
  */
