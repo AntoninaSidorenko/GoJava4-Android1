@@ -17,10 +17,11 @@ public class WithdrawMoney {
 
                 if (rest >= 0) {
                     System.out.print(ownerName + " " + withdrawal + " ");
-                    break;
+
                 } else {
                     System.out.println(ownerName + " NO");
                 }
+                break;
             }
         }
         return rest;
