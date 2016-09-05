@@ -80,12 +80,7 @@ public class User {
     }
 
     public int companyNameLength(String name) {
-        int count = 0;
-        for (int i = 0; i < companyName.length() + 1; i++) {
-            count = i;
-
-        }
-        System.out.println(count);
+        int count = name.length();
         return count;
     }
 
