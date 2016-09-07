@@ -8,5 +8,79 @@ commision - 3% if USD and up to 1000, 5% if USD and more than 1000
 10% if EUR and up to 1000 and 11% if EUR and more than 1000  */
 
 
-public class ChinaBank {
+public class ChinaBank extends Bank{
+
+
+    public ChinaBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
+        super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
+
+    }
+
+    @Override
+    int getLimitOfWithdrawal() {
+        int limitOfWithdrawal = 0;
+        switch (super.getCurrency()){
+            case USD:
+                limitOfWithdrawal = 100;
+                break;
+            case EUR:
+                limitOfWithdrawal = 150;
+                break;
+            default:
+                break;
+        }
+        return limitOfWithdrawal;
+    }
+
+    @Override
+    int getLimitOfFunding() {
+        int limitOfFunding = 0;
+        switch (super.getCurrency()){
+            case EUR:
+                limitOfFunding = 5000;
+                break;
+            case USD:
+                limitOfFunding = 10000;
+                break;
+            default:
+                break;
+        }
+        return limitOfFunding;
+    }
+
+    @Override
+    double getMonthlyRate() {
+        double monthlyRate = 0;
+        switch (super.getCurrency()){
+            case USD:
+                monthlyRate = 0.01;
+                break;
+            default:
+                break;
+        }
+        return monthlyRate;
+    }
+
+    @Override
+    double getCommission(double sum) {
+        double commission = 0;
+        switch (super.getCurrency()){
+            case USD:
+                if(sum <= 1000) commission = 0.03;
+                else commission = 0.05;
+                break;
+            case EUR:
+                if(sum <= 1000) commission = 0.1;
+                else commission = 0.11;
+                break;
+            default:
+                break;
+        }
+        return commission;
+    }
+
+    @Override
+    double moneyPaidMonthlyForSalary() {
+        return 0;
+    }
 }

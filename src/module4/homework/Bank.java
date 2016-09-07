@@ -80,11 +80,22 @@ public abstract class Bank {
 
     abstract int getLimitOfFunding();
 
-    abstract int getMonthlyRate();
+    abstract double getMonthlyRate();
 
-    abstract int getCommission();
+    abstract double getCommission(double sum);
 
     abstract double moneyPaidMonthlyForSalary();
 
-
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "id=" + id +
+                ", bankCountry='" + bankCountry + '\'' +
+                ", currency=" + currency +
+                ", numberOfEmployees=" + numberOfEmployees +
+                ", avrSalaryOfEmployee=" + avrSalaryOfEmployee +
+                ", rating=" + rating +
+                ", totalCapital=" + totalCapital +
+                '}';
+    }
 }
