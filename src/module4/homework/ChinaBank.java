@@ -1,25 +1,16 @@
 package module4.homework;
-/*
-ChinaBank: limit of withdrawal = 100 if currency is USD and 150 if currency is EUR
 
-limit of funding - 5000 if EUR and 10000 if USD
-monthly rate - 1% with USD and 0% with EUR
-commision - 3% if USD and up to 1000, 5% if USD and more than 1000
-10% if EUR and up to 1000 and 11% if EUR and more than 1000  */
-
-
-public class ChinaBank extends Bank{
-
+public class ChinaBank extends Bank {
 
     public ChinaBank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         super(id, bankCountry, currency, numberOfEmployees, avrSalaryOfEmployee, rating, totalCapital);
-
     }
+
 
     @Override
     int getLimitOfWithdrawal() {
         int limitOfWithdrawal = 0;
-        switch (super.getCurrency()){
+        switch (super.getCurrency()) {
             case USD:
                 limitOfWithdrawal = 100;
                 break;
@@ -35,7 +26,7 @@ public class ChinaBank extends Bank{
     @Override
     int getLimitOfFunding() {
         int limitOfFunding = 0;
-        switch (super.getCurrency()){
+        switch (super.getCurrency()) {
             case EUR:
                 limitOfFunding = 5000;
                 break;
@@ -51,7 +42,7 @@ public class ChinaBank extends Bank{
     @Override
     double getMonthlyRate() {
         double monthlyRate = 0;
-        switch (super.getCurrency()){
+        switch (super.getCurrency()) {
             case USD:
                 monthlyRate = 0.01;
                 break;
@@ -64,13 +55,13 @@ public class ChinaBank extends Bank{
     @Override
     double getCommission(double sum) {
         double commission = 0;
-        switch (super.getCurrency()){
+        switch (super.getCurrency()) {
             case USD:
-                if(sum <= 1000) commission = 0.03;
+                if (sum <= 1000) commission = 0.03;
                 else commission = 0.05;
                 break;
             case EUR:
-                if(sum <= 1000) commission = 0.1;
+                if (sum <= 1000) commission = 0.1;
                 else commission = 0.11;
                 break;
             default:
@@ -79,8 +70,4 @@ public class ChinaBank extends Bank{
         return commission;
     }
 
-    @Override
-    double moneyPaidMonthlyForSalary() {
-        return 0;
-    }
 }

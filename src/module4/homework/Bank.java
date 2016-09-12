@@ -9,8 +9,7 @@ public abstract class Bank {
     private long rating;
     private long totalCapital;
 
-    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees,
-                double avrSalaryOfEmployee, long rating, long totalCapital) {
+    public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         this.id = id;
         this.bankCountry = bankCountry;
         this.currency = currency;
@@ -18,6 +17,18 @@ public abstract class Bank {
         this.avrSalaryOfEmployee = avrSalaryOfEmployee;
         this.rating = rating;
         this.totalCapital = totalCapital;
+    }
+    abstract int getLimitOfWithdrawal();
+
+    abstract int getLimitOfFunding();
+
+    abstract double getMonthlyRate();
+
+    abstract double getCommission(double sum);
+
+    public double moneyPaidMonthlyForSalary(){
+        double monthlySalaryEmploees = getNumberOfEmployees()*getAvrSalaryOfEmployee();
+        return monthlySalaryEmploees;
     }
 
     public long getId() {
@@ -76,15 +87,7 @@ public abstract class Bank {
         this.totalCapital = totalCapital;
     }
 
-    abstract int getLimitOfWithdrawal();
 
-    abstract int getLimitOfFunding();
-
-    abstract double getMonthlyRate();
-
-    abstract double getCommission(double sum);
-
-    abstract double moneyPaidMonthlyForSalary();
 
     @Override
     public String toString() {
