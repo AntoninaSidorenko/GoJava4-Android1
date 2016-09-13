@@ -5,17 +5,18 @@ public class BankSystemimpl implements BankSystem {
     public void withdrawOfUser(User user, int amount) {
 
         double commission = amount * user.getBank().getCommission(amount);
-        if (user.getBank().getLimitOfFunding() >= amount + commission) {
+        if (user.getBank().getLimitOfWithdrawal() >= amount + commission) {
             double newBalance = user.getBalance() - amount - commission;
             user.setBalance(newBalance);
+        }else{
+            System.out.println("Error");
         }
-
     }
 
     @Override
     public void fandUser(User user, int amount) {
         double commission = amount * user.getBank().getCommission(amount);
-        if (amount <= user.getBank().getLimitOfFunding()) {
+        if (amount + commission <= user.getBank().getLimitOfFunding()) {
             user.setBalance(amount + user.getBalance() - commission);
         }
 
@@ -25,9 +26,12 @@ public class BankSystemimpl implements BankSystem {
     @Override
     public void transferMoney(User fromUser, User toUser, int amount) {
         double commission = amount * fromUser.getBank().getCommission(amount);
-        if (amount <= fromUser.getBank().getLimitOfWithdrawal() || amount > toUser.getBank().getLimitOfFunding()) {
-            fromUser.setBalance(fromUser.getBalance() - amount - commission);
+        double summ = amount + commission;
+        if (summ <= fromUser.getBank().getLimitOfWithdrawal() && amount <= toUser.getBank().getLimitOfFunding()) {
+            fromUser.setBalance(fromUser.getBalance() - summ);
             toUser.setBalance(toUser.getBalance() + amount);
+        }else {
+            System.out.println("Error");
         }
 
     }

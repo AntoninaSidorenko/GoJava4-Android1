@@ -43,14 +43,9 @@ public class EUBank extends Bank {
 
     @Override
     double getMonthlyRate() {
-        double monthlyRate = 0;
-        switch (super.getCurrency()) {
-            case EUR:
-                monthlyRate = 0.01;
-                break;
-            default:
-                break;
-        }
+        double monthlyRate;
+        if(getCurrency().equals(Currency.USD))monthlyRate = 0.01;
+        else monthlyRate = 0.02;
         return monthlyRate;
     }
 

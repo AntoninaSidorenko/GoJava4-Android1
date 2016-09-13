@@ -15,25 +15,39 @@ public class Main {
 
         BankSystem bankSystem = new BankSystemimpl();
 
-        bankSystem.withdrawOfUser(user1, 1200);
-        System.out.println(user1);
 
-        bankSystem.fandUser(user2, 2000);
+        bankSystem.transferMoney(user1, user2, 1000);
+        System.out.println(user1);
         System.out.println(user2);
 
-        bankSystem.transferMoney(user3, user4, 1000);
-        System.out.println(user3);
-        System.out.println(user4);
-
-        bankSystem.paySalary(user5);
-        System.out.println(user5);
-
-        bankSystem.transferMoney(user1, user6, 1000);
-        System.out.println(user6);
+        bankSystem.transferMoney(user1, user2, 900);
         System.out.println(user1);
+        System.out.println(user2);
 
 
-        System.out.println(usBank.moneyPaidMonthlyForSalary());
+//        bankSystem.withdrawOfUser(user1, 1200);
+//        System.out.println(user1);
+//
+//        bankSystem.fandUser(user2, 2000);
+//        System.out.println(user2);
+//
+//        bankSystem.transferMoney(user3, user4, 1000);
+//        System.out.println(user3);
+//        System.out.println(user4);
+//
+//        bankSystem.transferMoney(user1, user2, 12000);
+//        System.out.println(user1);
+//        System.out.println(user2);
+//
+//        bankSystem.paySalary(user5);
+//        System.out.println(user5);
+//
+//        bankSystem.transferMoney(user1, user6, 1000);
+//        System.out.println(user6);
+//        System.out.println(user1);
+
+
+//        System.out.println(usBank.moneyPaidMonthlyForSalary());
 
 
     }

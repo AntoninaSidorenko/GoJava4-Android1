@@ -100,10 +100,11 @@ public class User {
                 "balance=" + balance +
                 ", bank=" + bank +
                 ", name=" + name +
-                ", id=" + id +
-                ", numberofEmployee=" + numberOfEmployee +
+//                ", id=" + id +
+//                ", numberofEmployee=" + numberOfEmployee +
                 ", avrSallaryOfEmployee=" + salaryOfEmploee +
-                ", totalCapital=" + totalCapital +
+//                ", totalCapital=" + totalCapital +
                 '}';
     }
+
 }

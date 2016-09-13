@@ -89,16 +89,49 @@ public abstract class Bank {
 
 
 
-    @Override
-    public String toString() {
-        return "Bank{" +
-                "id=" + id +
-                ", bankCountry='" + bankCountry + '\'' +
-                ", currency=" + currency +
-                ", numberOfEmployees=" + numberOfEmployees +
-                ", avrSalaryOfEmployee=" + avrSalaryOfEmployee +
-                ", rating=" + rating +
-                ", totalCapital=" + totalCapital +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Bank{" +
+//                "id=" + id +
+//                ", bankCountry='" + bankCountry + '\'' +
+//                ", currency=" + currency +
+//                ", numberOfEmployees=" + numberOfEmployees +
+//                ", avrSalaryOfEmployee=" + avrSalaryOfEmployee +
+//                ", rating=" + rating +
+//                ", totalCapital=" + totalCapital +
+//                '}';
+//    }
+
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//
+//        Bank bank = (Bank) o;
+//
+//        if (id != bank.id) return false;
+//        if (numberOfEmployees != bank.numberOfEmployees) return false;
+//        if (Double.compare(bank.avrSalaryOfEmployee, avrSalaryOfEmployee) != 0) return false;
+//        if (rating != bank.rating) return false;
+//        if (totalCapital != bank.totalCapital) return false;
+//        if (bankCountry != null ? !bankCountry.equals(bank.bankCountry) : bank.bankCountry != null) return false;
+//        return currency == bank.currency;
+//
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        int result;
+//        long temp;
+//        result = (int) (id ^ (id >>> 32));
+//        result = 31 * result + (bankCountry != null ? bankCountry.hashCode() : 0);
+//        result = 31 * result + (currency != null ? currency.hashCode() : 0);
+//        result = 31 * result + numberOfEmployees;
+//        temp = Double.doubleToLongBits(avrSalaryOfEmployee);
+//        result = 31 * result + (int) (temp ^ (temp >>> 32));
+//        result = 31 * result + (int) (rating ^ (rating >>> 32));
+//        result = 31 * result + (int) (totalCapital ^ (totalCapital >>> 32));
+//        return result;
+//
+//    }
 }
