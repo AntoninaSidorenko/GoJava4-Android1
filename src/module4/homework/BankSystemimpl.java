@@ -5,8 +5,9 @@ public class BankSystemimpl implements BankSystem {
     public void withdrawOfUser(User user, int amount) {
 
         double commission = amount * user.getBank().getCommission(amount);
-        if (user.getBank().getLimitOfWithdrawal() >= amount + commission) {
-            double newBalance = user.getBalance() - amount - commission;
+        double summ = amount + commission;
+        if (user.getBank().getLimitOfWithdrawal() >= summ) {
+            double newBalance = user.getBalance() - summ;
             user.setBalance(newBalance);
         }else{
             System.out.println("Error");

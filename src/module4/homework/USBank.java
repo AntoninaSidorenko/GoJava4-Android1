@@ -40,17 +40,9 @@ public class USBank extends Bank {
 
     @Override
     double getMonthlyRate() {
-        double monthlyRate = 0.0;
-        switch (super.getCurrency()) {
-            case USD:
-                monthlyRate = 0.01;
-                break;
-            case EUR:
-                monthlyRate = 0.05;
-                break;
-            default:
-                break;
-        }
+        double monthlyRate;
+        if (getCurrency().equals(Currency.USD)) monthlyRate = 0.01;
+        else monthlyRate = 0.02;
         return monthlyRate;
     }
 

@@ -42,13 +42,7 @@ public class ChinaBank extends Bank {
     @Override
     double getMonthlyRate() {
         double monthlyRate = 0;
-        switch (super.getCurrency()) {
-            case USD:
-                monthlyRate = 0.01;
-                break;
-            default:
-                break;
-        }
+        if(getCurrency().equals(Currency.USD)) monthlyRate = 0.01;
         return monthlyRate;
     }
 
