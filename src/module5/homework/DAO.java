@@ -7,8 +7,8 @@ public interface DAO {
 
     Room update(Room room);
 
-    Room findByld(long id);
+    Room findById(long id);
 
-
+    Room getAll();
 
 }

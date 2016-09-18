@@ -20,7 +20,12 @@ public class DAOImpl implements DAO {
     }
 
     @Override
-    public Room findByld(long id) {
+    public Room findById(long id) {
+        return null;
+    }
+
+    @Override
+    public Room getAll() {
         return null;
     }
 }
