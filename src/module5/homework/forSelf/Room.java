@@ -1,30 +1,19 @@
-package module5.homework;
+package module5.homework.forSelf;
 
 import java.util.Date;
 
+/**
+ * Created by Lenovo on 19.09.2016.
+ */
 public class Room {
-//    private long id;
 //    private int prise;
 //    private int person;
-//    private Date dateAvailableFrom;
-//    private String hotelName;
 //    String cityName;
 //
-//    public Room(long id, int prise, int person, Date dateAvailableFrom, String hotelName, String cityName) {
-//        this.id = id;
+//    public Room(int prise, int person, String cityName) {
 //        this.prise = prise;
 //        this.person = person;
-//        this.dateAvailableFrom = dateAvailableFrom;
-//        this.hotelName = hotelName;
 //        this.cityName = cityName;
-//    }
-//
-//    public long getId() {
-//        return id;
-//    }
-//
-//    public void setId(long id) {
-//        this.id = id;
 //    }
 //
 //    public int getPrise() {
@@ -41,22 +30,6 @@ public class Room {
 //
 //    public void setPerson(int person) {
 //        this.person = person;
-//    }
-//
-//    public Date getDateAvailableFrom() {
-//        return dateAvailableFrom;
-//    }
-//
-//    public void setDateAvailableFrom(Date dateAvailableFrom) {
-//        this.dateAvailableFrom = dateAvailableFrom;
-//    }
-//
-//    public String getHotelName() {
-//        return hotelName;
-//    }
-//
-//    public void setHotelName(String hotelName) {
-//        this.hotelName = hotelName;
 //    }
 //
 //    public String getCityName() {
@@ -91,11 +64,8 @@ public class Room {
 //    @Override
 //    public String toString() {
 //        return "Room{" +
-//                "id=" + id +
-//                ", prise=" + prise +
+//                "prise=" + prise +
 //                ", person=" + person +
-//                ", dateAvailableFrom=" + dateAvailableFrom +
-//                ", hotelName='" + hotelName + '\'' +
 //                ", cityName='" + cityName + '\'' +
 //                '}';
 //    }
