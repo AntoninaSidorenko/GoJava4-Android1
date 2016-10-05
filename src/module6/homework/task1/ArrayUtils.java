@@ -2,7 +2,8 @@ package module6.homework.task1;
 
 
 public final class ArrayUtils {
-    static int sum(int[] array) {
+
+    public static int sum(int[] array) {
         int index = 0;
         for (int i = 0; i < array.length; i++) {
             index += array[i];
@@ -11,7 +12,7 @@ public final class ArrayUtils {
 
     }
 
-    static int min(int[] array) {
+    public static int min(int[] array) {
         int min = array[0];
         for (int i = 0; i < array.length; i++) {
             if (min > array[i]) {
@@ -21,7 +22,7 @@ public final class ArrayUtils {
         return min;
     }
 
-    static int max(int[] array) {
+    public static int max(int[] array) {
         int max = 0;
         for (int i = 0; i < array.length; i++) {
             if (max < array[i]) max = array[i];
@@ -30,7 +31,7 @@ public final class ArrayUtils {
         return max;
     }
 
-    static int maxPositive(int[] array) {
+    public static int maxPositive(int[] array) {
         int maxPositive = 0;
         for (int i = 0; i < array.length; i++) {
             if (maxPositive < 0) continue;
@@ -41,7 +42,7 @@ public final class ArrayUtils {
         return maxPositive;
     }
 
-    static int multiplication(int[] array) {
+    public static int multiplication(int[] array) {
         int result = 1;
         for (int number : array) {
             result *= number;
@@ -62,7 +63,7 @@ public final class ArrayUtils {
         return second;
     }
 
-    static int[] reverse(int[] array) {
+    public static int[] reverse(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int index = array[i];
             for (int j = i - 1; j >= 0; j--) {
@@ -81,7 +82,7 @@ public final class ArrayUtils {
         return array;
     }
 
-    static String findEvenElements(int[] array) {
+    public static String findEvenElements(int[] array) {
         for (int i = 0; i < array.length; i++)
             if (array[i] % 2 == 0) {
                 System.out.println(array[i]);

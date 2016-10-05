@@ -14,6 +14,13 @@ public class Store {
 
     public Store(String city) {
         this.city = city;
+//
+//        items[0] = new Item(11, "BMV", "Kiev", 100);
+//        items[1] = new Item(12, "opel", "Poltava", 122);
+//        items[2] = new Item(13, "Honda", "Lviv", 345);
+//        items[3] = new Item(14, "Skoda", "Dnepr",643 );
+//        items[4] = new Item(15, "Volvo", "Odessa", 432);
+
     }
 
     public Order[] getOrders() {
@@ -22,5 +29,13 @@ public class Store {
 
     public static int getIndex() {
         return index;
+    }
+
+    public Item[] getItems() {
+        return items;
+    }
+
+    public String getCity() {
+        return city;
     }
 }

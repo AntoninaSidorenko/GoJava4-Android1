@@ -6,23 +6,38 @@ public class Controller {
 
     private DAOImpl dao = new DAOImpl();
 
-    void makeOrder(User user, Item item) {
+    public void makeOrder(User user, Item item) {
         Order order = new Order(item, user);
+
+        Item [] items = store.getItems();
+
+        for(Item storeItem : items){
+            if(!storeItem.getCityStored().equals(item.getCityStored()) && !storeItem.getName().equals(item.getName())){
+                System.out.println("We don't have this item");
+                return;
+            }
+
+        }
+
         store.getOrders()[Store.getIndex()] = order;
 
         dao.save(order);
     }
 
-    void makeOrder(User user, Item item) {
-        Order order = new Order(item, user);
-        store.getOrders()[Store.getIndex()] = order;
+    public void cancelOrder(User user, Item item) {
 
-        dao.save(order);
+        Order[] orders = store.getOrders();
+        for(Order storeOrder : orders){
+            if(storeOrder.getUser().equals(user) && storeOrder.getItem().equals(item)){
+                storeOrder.setActive(false);
+            }
+        }
     }
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
